@@ -1,0 +1,19 @@
+---
+# Distros
+
+# Ubuntu
+- name: Autologin, in lightdm
+  ansible.builtin.template:
+    src: "{{ ansible_distribution }}.j2"
+    dest: /etc/lxdm/lxdm.conf
+  become: true
+  when: ansible_distribution == "Ubuntu"
+
+# Fedora https://www.redips.net/linux/fedora-lxde-autologin-kodi-autostart/
+- name: Autologin, in lightdm for Ubuntu
+  ansible.builtin.lineinfile:
+    path: /etc/lxdm/lxdm.conf
+    regexp: '^# autologin'
+    line: "autologin={{ ansible_user }}"
+  become: true
+  when: ansible_distribution == "Fedora"

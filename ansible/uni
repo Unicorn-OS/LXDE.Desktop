@@ -1,0 +1,7 @@
+---
+- hosts: fedora #, ubuntu
+  vars:
+    autologin: True
+
+  roles:
+  - LXDE

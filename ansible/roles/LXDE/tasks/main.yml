@@ -1,0 +1,16 @@
+---
+- name: get
+  ansible.builtin.shell: which lxsession
+  register: which_lxde
+
+- name: set is LXDE installed?
+  ansible.builtin.set_fact:
+    lxde_installed: "{{ true if which_lxde.rc | int == 0 else false }}"
+
+- include_role:
+    name: "{{role_path}}/install"
+  when: not lxde_installed
+
+- include_role:
+    name: "{{role_path}}/autologin"
+  when: autologin
