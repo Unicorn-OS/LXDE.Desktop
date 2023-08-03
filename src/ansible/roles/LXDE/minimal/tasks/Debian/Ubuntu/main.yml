@@ -1,9 +1,7 @@
-- name: Install 
+- name: Install minimal LXDE 
   ansible.builtin.apt:
     update_cache: yes
     pkg:
     - lxde-core
-    - lxterminal
-    - lxsession
   become: true
 
