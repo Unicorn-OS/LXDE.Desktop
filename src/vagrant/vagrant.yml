@@ -1,7 +1,13 @@
-- name: Vagrant VM
-  hosts: LXDE
+- name: Vagrant
+  hosts: LXDE #,default
   remote_user: vagrant
 
   roles:
-    - LXDE/minimal
-    - user
+    - AptCacherNg/Client
+    - Gnome/minimal
+    - Gnome/Setting
+    # - Jupyter
+    # - Jupyter/VSCode Extension
+    # - Project
+    - .temp
+    - os/Change login password

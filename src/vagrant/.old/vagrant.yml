@@ -1,0 +1,7 @@
+- name: Vagrant VM
+  hosts: LXDE
+  remote_user: vagrant
+
+  roles:
+    - LXDE/minimal
+    - user
