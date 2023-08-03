@@ -1,0 +1,21 @@
+vagrant: false
+
+# Change this file to add dependency artifacts, repos, & roles!
+repo: [
+  { repo: "git@github.com:Unicorn-OS/os.User.git", name: "os.User"},
+  ]
+
+role: [
+  { git: "os.User", name: "User", path: "src/ansible/roles/User"},
+  ]
+
+library: [
+  # { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library"},
+  ]
+
+# set Inventory "{{static_inventory}}"
+dynamic_inventory: hosts
+test_inventory: true
+
+# dependencies
+git_fetch_update: true
