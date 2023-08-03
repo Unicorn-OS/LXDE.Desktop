@@ -1,8 +1,0 @@
-- name: Install packages
-  ansible.builtin.apt:
-    pkg:
-      - ansible
-      - lxde-core
-      - lxsession
-  become: true
-  when: false
