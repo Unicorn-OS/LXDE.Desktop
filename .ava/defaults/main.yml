@@ -1,2 +1,0 @@
-home_dir: "src/.uni/os"
-depends: ["git@github.com:Unicorn-OS/LXDE.desktop.git"]
