@@ -4,4 +4,4 @@
 
   roles:
     - LXDE/minimal
-    - User/change login password
+    - user

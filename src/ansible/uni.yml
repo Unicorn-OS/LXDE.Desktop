@@ -1,5 +1,4 @@
----
-- hosts: fedora #, ubuntu
+- hosts: all
   vars:
     autologin: True
 
