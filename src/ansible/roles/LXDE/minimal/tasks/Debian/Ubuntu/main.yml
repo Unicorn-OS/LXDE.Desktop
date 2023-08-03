@@ -1,0 +1,8 @@
+- name: Install 
+  ansible.builtin.apt:
+    pkg:
+    - lxde-core
+    - lxterminal
+    - lxsession
+  become: true
+

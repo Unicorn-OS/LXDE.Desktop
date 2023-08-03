@@ -1,0 +1,6 @@
+- name: Install LightDM
+  ansible.builtin.apt:
+    pkg:
+    - lightdm
+  become: true
+

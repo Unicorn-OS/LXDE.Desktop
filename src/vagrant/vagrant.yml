@@ -3,11 +3,4 @@
   remote_user: vagrant
 
   roles:
-    - AptCacherNg/Client
-    - Gnome/minimal
-    - Gnome/Setting
-    # - Jupyter
-    # - Jupyter/VSCode Extension
-    # - Project
-    - .temp
-    - os/Change login password
+    - LXDE/minimal
