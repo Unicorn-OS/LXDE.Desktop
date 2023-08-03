@@ -1,5 +1,5 @@
-- name: Gnome VM
-  hosts: default
+- name: Vagrant VM
+  hosts: LXDE
   remote_user: vagrant
 
   roles:
