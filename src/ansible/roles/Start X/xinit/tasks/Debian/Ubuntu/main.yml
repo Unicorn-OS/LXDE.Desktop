@@ -1,0 +1,7 @@
+- name: Install Xinit - Lets you run startx!
+  ansible.builtin.apt:
+    update_cache: yes
+    pkg:
+    - xinit
+  become: true
+
