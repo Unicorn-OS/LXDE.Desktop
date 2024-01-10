@@ -1,0 +1,19 @@
+# https://docs.fedoraproject.org/en-US/fedora-server/usecase-gui-addon/
+
+- name: Install LXDE
+  ansible.builtin.dnf:
+    name:
+      - @lxde-desktop-environment
+    state: latest
+  become: true
+
+# https://stackoverflow.com/questions/64701241/how-do-i-write-ansible-task-for-systemctl-set-default-graphical-target-without
+- name: Get current systemd default
+  command: "systemctl get-default"
+  changed_when: false
+  register: systemdefault
+
+- name: Set default to graphical target
+  command: "systemctl set-default graphical.target"
+  when: "'graphical' not in systemdefault.stdout"
+  become: true

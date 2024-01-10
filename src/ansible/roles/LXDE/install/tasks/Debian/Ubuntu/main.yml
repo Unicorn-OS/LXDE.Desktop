@@ -1,0 +1,7 @@
+- name: Install minimal LXDE 
+  ansible.builtin.apt:
+    update_cache: yes
+    pkg:
+    - lxde-core
+  become: true
+  when: minimal

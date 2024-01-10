@@ -1,7 +1,6 @@
-- name: Install minimal LXDE 
+- name: Install GDM
   ansible.builtin.apt:
     update_cache: yes
     pkg:
-    - lxde-core
+    - gdm
   become: true
-

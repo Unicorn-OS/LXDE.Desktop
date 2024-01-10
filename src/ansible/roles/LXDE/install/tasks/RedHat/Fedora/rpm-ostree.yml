@@ -1,0 +1,9 @@
+- name: Install LXDE
+  community.general.rpm_ostree_pkg:
+    name: "{{ item }}"
+    state: present
+  loop:
+  - @lxde-desktop-environment
+  become: true
+  notify:
+  - Reboot
