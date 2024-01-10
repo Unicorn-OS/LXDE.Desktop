@@ -1,5 +1,4 @@
-ln -srf ../../../ansible .
+mkdir -p ansible
+ln -srf ../../../ansible/roles ansible/
 
-ln -srf ../../.gitignore .
-
-ln -srf ../../vagrant.yml .
+ln -srf ../vagrant.yml ansible/
